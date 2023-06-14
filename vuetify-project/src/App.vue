@@ -1,5 +1,6 @@
 <template>
   <v-app>
+
     <SideBar />
     <v-main>
       <!-- cards -->
