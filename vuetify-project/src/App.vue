@@ -1,26 +1,39 @@
 <template>
   <v-app>
-
-    <SideBar />
+    <SideBar @selectOption="onSelectOption" />
     <v-main>
-      <ImageGallery></ImageGallery>
+      <ImageGallery :isWithColor="isWithColor" />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 import SideBar from '@/components/SideBar.vue';
 import ImageGallery from './components/ImageGallery.vue';
 
+
+
 export default defineComponent({
   components: {
-    SideBar,
-    ImageGallery
-},
+    SideBar: {
+      name: 'SideBar',
+    },
+    ImageGallery: {
+      name: 'ImageGallery',
+    }
+  },
   setup() {
 
-    return {};
+    const isWithColor = ref(true);
+
+    const onSelectOption = (isColor) => {
+      isWithColor.value = isColor;
+    }
+
+    return {
+      onSelectOption
+    };
   }
 });
 </script>
