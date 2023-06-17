@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <SideBar @selectOption="onSelectOption" />
+    <SideBar @select-option="onSelectOption" />
     <v-main>
-      <ImageGallery :isWithColor="isWithColor" />
+      <ImageGallery :is-with-color="isWithColor" />
     </v-main>
   </v-app>
 </template>
@@ -10,30 +10,22 @@
 <script>
 import { defineComponent, ref } from 'vue';
 import SideBar from '@/components/SideBar.vue';
-import ImageGallery from './components/ImageGallery.vue';
-
-
+import ImageGallery from '@/components/ImageGallery.vue';
 
 export default defineComponent({
   components: {
-    SideBar: {
-      name: 'SideBar',
-    },
-    ImageGallery: {
-      name: 'ImageGallery',
-    }
+    SideBar,
+    ImageGallery
   },
-  setup() {
-
-    const isWithColor = ref(true);
-
-    const onSelectOption = (isColor) => {
-      isWithColor.value = isColor;
-    }
-
+  data() {
     return {
-      onSelectOption
+      isWithColor: true
     };
+  },
+  methods: {
+    onSelectOption(isColor) {
+      this.isWithColor = isColor;
+    }
   }
 });
 </script>
