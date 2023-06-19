@@ -1,12 +1,12 @@
 <template>
-  <v-app-bar class="bg-black" :elevation="10"></v-app-bar>
-  <v-navigation-drawer :elevation="10" expand-on-hover rail class="bg-black" location="right">
+  <v-navigation-drawer expand-on-hover rail :width="280" :elevation="10" class="bg-black" location="right">
     <v-list>
-      <v-list-item prepend-avatar="https://drive.google.com/uc?id=1kWJg9AJnxoGV4zFdlFypFMt5BTRTqkLc"
-        :lazy-src="`https://drive.google.com/uc?id=1kWJg9AJnxoGV4zFdlFypFMt5BTRTqkLc`" title="Timothy Murphy">
+      <v-list-item :lazy-src="`https://drive.google.com/uc?id=1kWJg9AJnxoGV4zFdlFypFMt5BTRTqkLc`"
+        prepend-avatar="https://drive.google.com/uc?id=1kWJg9AJnxoGV4zFdlFypFMt5BTRTqkLc"
+        title="Timothy Murphy">
       </v-list-item>
     </v-list>
-    <v-divider class="border-opacity-50" color="grey-lighten-5">
+    <v-divider elevation="24" >
     </v-divider>
     <v-list density="compact" nav>
       <v-list-item prepend-icon="mdi-email-fast-outline" title="TimothyMurphy123@gmail.com">
@@ -27,10 +27,13 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
+  data() {
+    return {
+
+    };
+  },
   methods: {
-    handleSelectOption(isColor) {
-      this.$emit('select-option', isColor);
-    }
+
   },
 });
 </script>
