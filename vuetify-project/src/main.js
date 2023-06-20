@@ -13,8 +13,11 @@ import { createApp } from 'vue'
 // Plugins
 import { registerPlugins } from '@/plugins'
 
+
+import VueFullPage from 'vue-fullpage.js'
+
 const app = createApp(App)
 
 registerPlugins(app)
-
+app.use(VueFullPage)
 app.mount('#app')

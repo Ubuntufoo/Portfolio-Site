@@ -1,12 +1,11 @@
 <template>
-  <v-navigation-drawer expand-on-hover rail :width="280" :elevation="10" class="bg-black" location="right">
+  <v-navigation-drawer expand-on-hover rail disable-resize-watcher="false" :elevation="24" class="bg-black" location="right">
     <v-list>
       <v-list-item :lazy-src="`https://drive.google.com/uc?id=1kWJg9AJnxoGV4zFdlFypFMt5BTRTqkLc`"
-        prepend-avatar="https://drive.google.com/uc?id=1kWJg9AJnxoGV4zFdlFypFMt5BTRTqkLc"
-        title="Timothy Murphy">
+        prepend-avatar="https://drive.google.com/uc?id=1kWJg9AJnxoGV4zFdlFypFMt5BTRTqkLc" title="Timothy Murphy">
       </v-list-item>
     </v-list>
-    <v-divider elevation="24" >
+    <v-divider :thickness="2">
     </v-divider>
     <v-list density="compact" nav>
       <v-list-item prepend-icon="mdi-email-fast-outline" title="TimothyMurphy123@gmail.com">
