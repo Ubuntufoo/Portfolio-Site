@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer expand-on-hover rail disable-resize-watcher="false"  :elevation="24" :width="290" class="bg-black" location="right">
+  <v-navigation-drawer expand-on-hover rail disable-resize-watcher="false" :elevation="24" :width="290" class="bg-black" location="right">
     <v-list>
       <v-list-item :lazy-src="`https://drive.google.com/uc?id=1kWJg9AJnxoGV4zFdlFypFMt5BTRTqkLc`"
         prepend-avatar="https://drive.google.com/uc?id=1kWJg9AJnxoGV4zFdlFypFMt5BTRTqkLc" title="Timothy Murphy">

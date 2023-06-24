@@ -71,12 +71,11 @@ export default defineComponent({
         afterLoad: this.afterLoad,
         scrollOverflow: true,
         scrollBar: false,
-        // menu: '#menu',
         navigation: true,
         controlArrows: false,
         scrollingSpeed: 1500,
         anchors: ['page1', 'page2', 'page3', 'page4'],
-        sectionsColor: ['#cdcbcc', '#cdcbcc']
+        sectionsColor: ['#d5dfff', '#cdcbcc']
       }
     };
   },
@@ -85,16 +84,5 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-/* .angledEl {
-  top: 0;
-  left: 0;
-  width: 97.4%;
-  height: 100%;
-  background-color: #dbdbdb;
-  clip-path: polygon(50% 0, 0% 50%, 100% 50%, 50% 100%, 0 50%);
-} */
-
-/* Left nav chevrons */
-</style>
+<style></style>
 
