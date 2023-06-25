@@ -46,10 +46,4 @@ export default defineComponent({
 });
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/css?family=Gaegu');
-
-a {
-  font-family: "Gaegu", Helvetica, Arial, sans-serif !important;
-}
-</style>
+<style scoped></style>

@@ -7,12 +7,12 @@
       <section class="section angledEl" data-anchor="page1">
         <div class="slide">
           <v-main>
-
+            slide                1
           </v-main>
         </div>
         <div class="slide active">
-          <v-main>
-            <div class="arrow-left">
+          <v-main>slide 1.1
+            <!-- <div class="arrow-left">
               <span></span>
               <span></span>
               <span></span>
@@ -26,12 +26,12 @@
               <span></span>
               <span></span>
               <span></span>
-            </div>
+            </div> -->
           </v-main>
         </div>
         <div class="slide">
           <v-main>
-
+            slide 1.2
           </v-main>
         </div>
       </section>
@@ -84,5 +84,11 @@ export default defineComponent({
 });
 </script>
 
-<style></style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Comic+Neue:ital,wght@1,300&display=swap');
+
+.v-application {
+  font-family: 'Belanosima' !important;
+}
+</style>
 
