@@ -8,8 +8,9 @@
       <section class="section angledEl" data-anchor="page1">
         <div class="slide">
           <v-main>
+            <p class="text-center">slide 1.0</p>
             <template v-if="showChevrons">
-              <template v-for="direction in ['right', 'bottom']">
+              <template v-for="direction in ['right', 'right-bottom']">
                 <NavChevron :class="`skills-chevron-${direction}`" />
               </template>
             </template>
@@ -27,8 +28,9 @@
         </div>
         <div class="slide">
           <v-main>
+            <p class="text-center">slide 1.2</p>
             <template v-if="showChevrons">
-              <template v-for="direction in ['left', 'bottom']">
+              <template v-for="direction in ['left', 'left-bottom']">
                 <NavChevron :class="`projects-chevron-${direction}`" />
               </template>
             </template>
@@ -37,7 +39,12 @@
       </section>
       <section class="section angledEl" data-anchor="page2">
         <v-main>
-
+          <p class="text-center">section 2</p>
+          <template v-if="showChevrons">
+            <template v-for="direction in ['top', 'left-top', 'right-top']">
+              <NavChevron :class="`roadmap-chevron-${direction}`" />
+            </template>
+          </template>
         </v-main>
       </section>
     </full-page>
@@ -72,7 +79,7 @@ export default defineComponent({
         controlArrows: false,
         scrollingSpeed: 1500,
         anchors: ['page1', 'page2', 'page3', 'page4'],
-        sectionsColor: ['#d5dfff', '#cdcbcc'],
+        sectionsColor: ['#ED6E64', '#0C98F7'],
       }
     };
   },
@@ -82,12 +89,13 @@ export default defineComponent({
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Comic+Neue:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&family=Raleway+Dots&display=swap');
 
 .v-application {
-  font-family: 'Belanosima' !important;
+  font-family: 'Quicksand', sans-serif;
 }
 
+/* Navigation chevrons */
 .origin-chevron-left {
   top: 45%;
   left: 35%;
@@ -112,9 +120,9 @@ export default defineComponent({
   transform: rotate(-90deg);
 }
 
-.skills-chevron-bottom {
+.skills-chevron-right-bottom {
   top: 85%;
-  left: 30%;
+  left: 30.1%;
   transform: rotate(-45deg);
 }
 
@@ -124,10 +132,28 @@ export default defineComponent({
   transform: rotate(90deg);
 }
 
-.projects-chevron-bottom {
+.projects-chevron-left-bottom {
   top: 85%;
-  left: 68.3%;
+  left: 68.2%;
   transform: rotate(45deg);
+}
+
+.roadmap-chevron-top {
+  top: 19%;
+  left: 48%;
+  transform: rotate(180deg);
+}
+
+.roadmap-chevron-right-top {
+  top: 19%;
+  left: 91%;
+  transform: rotate(-135deg);
+}
+
+.roadmap-chevron-left-top {
+  top: 19%;
+  left: 4.5%;
+  transform: rotate(135deg);
 }
 </style>
 
